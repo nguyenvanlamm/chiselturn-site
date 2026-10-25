@@ -1,0 +1,20 @@
+# Chiselturn
+
+> Chiselturn (on the App Store as "Chiselturn: Stone Puzzle") is a calm turntable puzzle game for iPhone (iOS 15 or later). A block of coloured stone stands on a turntable above one straight rail; carve it away one chisel at a time until the statue inside is unveiled. Coming soon to the App Store.
+
+- Controls: tap a chisel; it runs along the rail and strikes the stone nearest the rail in each column, but only stones of its own colour. Turn the turntable with the two turn keys to bring another face down to the rail.
+- A chisel with power left hangs on a hook of the rack (up to seven hooks). When every hook is taken the level stops ("Rack full"). Fewer turns earn more stars, up to three.
+- 90 statues in three chapters: The Yard (30, included), The Quarry and The Gallery (60 more with All Chapters).
+- Tools: Extra Hook (one more hook, also rescues a full rack), Pick (use a chisel from a back row), Mallet (break every stone of one colour that faces the rail).
+- Purchases: All Chapters ($2.99, one-time); Tool Pouch ($0.99, 3 of each tool) and Tool Chest ($2.99, 8 of each). Restore Purchases is in Settings and in the Shop.
+- No ads, no account, no analytics or tracking. Progress stays on the device and the game plays offline; only purchases talk to the App Store. English only.
+
+## Pages
+
+- [Home](https://nguyenvanlamm.github.io/chiselturn-site/index.html.md): what the game is and how it plays
+- [Support](https://nguyenvanlamm.github.io/chiselturn-site/support.html.md): contact, how to play, purchases and restoring, progress
+- [Privacy Policy](https://nguyenvanlamm.github.io/chiselturn-site/privacy.html.md): what the game stores on the device and what it never collects
+
+## Optional
+
+- [Website](https://nguyenvanlamm.github.io/chiselturn-site/): the HTML landing page

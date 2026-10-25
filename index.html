@@ -6,10 +6,23 @@
 <title>Chiselturn — turn the stone, carve the statue</title>
 <meta name="description" content="Chiselturn is a calm iPhone puzzle: turn a block of coloured stone on a turntable and carve it with chisels along one rail. 90 statues, no ads, no tracking.">
 <link rel="canonical" href="https://nguyenvanlamm.github.io/chiselturn-site/">
+<link rel="alternate" type="text/markdown" href="index.html.md">
+<link rel="describedby" href="llms.txt">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="Chiselturn">
-<meta property="og:description" content="Turn the stone. Carve the statue. A calm puzzle for iPhone.">
-<meta property="og:image" content="https://nguyenvanlamm.github.io/chiselturn-site/assets/home.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#191715">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chiselturn">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Chiselturn: Turn the stone. Carve the statue.">
+<meta property="og:description" content="A calm turntable puzzle for iPhone: turn a block of coloured stone and carve it one chisel at a time. 90 statues, no ads, no tracking. Coming soon to the App Store.">
+<meta property="og:url" content="https://nguyenvanlamm.github.io/chiselturn-site/">
+<meta property="og:image" content="https://nguyenvanlamm.github.io/chiselturn-site/assets/share-card.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Chiselturn: Turn the stone. Carve the statue. Beside the title, a block of terracotta and moss stones mid-turn on a turntable above a blue rail.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Martian+Mono:wdth,wght@87.5..100,500..700&display=swap" rel="stylesheet">
@@ -48,14 +61,55 @@
   .shot { width: 100%; max-width: 360px; border-radius: 20px; justify-self: center; }
   .note { margin-top: 18px; color: var(--dim); font-size: 15px; }
   footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--hair); display: flex; gap: 22px; flex-wrap: wrap; color: var(--dim); font-size: 15px; }
-  footer a { color: var(--chalk); }
+  footer a { color: var(--chalk); display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px; }
+  .cta:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+  .cta:active { transform: translateY(3px); box-shadow: 0 2px 0 #A39D91; }
   a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   @media (max-width: 760px) { .hero, .how { grid-template-columns: 1fr; } .grid { grid-template-columns: 1fr; } }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://nguyenvanlamm.github.io/chiselturn-site/#website",
+      "name": "Chiselturn",
+      "url": "https://nguyenvanlamm.github.io/chiselturn-site/",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://nguyenvanlamm.github.io/chiselturn-site/#author" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://nguyenvanlamm.github.io/chiselturn-site/#author",
+      "name": "Nguyen Van Lam"
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://nguyenvanlamm.github.io/chiselturn-site/#game",
+      "name": "Chiselturn",
+      "alternateName": "Chiselturn: Stone Puzzle",
+      "description": "A calm turntable puzzle for iPhone. A block of coloured stone stands on a turntable above one rail; tap a chisel to carve the front stone of its colour in every column, turn the block a quarter turn to bring another face down, and keep a hook free on the rack. 90 statues in three chapters (The Yard, The Quarry, The Gallery). No ads, no tracking, plays offline.",
+      "url": "https://nguyenvanlamm.github.io/chiselturn-site/",
+      "image": "https://nguyenvanlamm.github.io/chiselturn-site/assets/share-card.jpg",
+      "screenshot": ["https://nguyenvanlamm.github.io/chiselturn-site/assets/turn.webp", "https://nguyenvanlamm.github.io/chiselturn-site/assets/home.webp"],
+      "gamePlatform": "iPhone",
+      "operatingSystem": "iOS 15 or later",
+      "applicationCategory": "GameApplication",
+      "genre": ["Puzzle", "Casual"],
+      "playMode": "SinglePlayer",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "author": { "@id": "https://nguyenvanlamm.github.io/chiselturn-site/#author" },
+      "publisher": { "@id": "https://nguyenvanlamm.github.io/chiselturn-site/#author" }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <main>
-  <header><img src="assets/icon.png" alt="" width="44" height="44"><span>Chiselturn</span></header>
+  <header><img src="assets/icon.webp" alt="" width="44" height="44"><span>Chiselturn</span></header>
 
   <div class="hero">
     <div>
@@ -64,7 +118,7 @@
       <p class="sub">A calm puzzle about one rail, a turntable and a block of coloured stone. Choose the face, choose the chisel, and watch a picture come out of the rock.</p>
       <a class="cta" href="#how">Coming soon on the App Store<small>See how it plays ↓</small></a>
     </div>
-    <img class="phone" src="assets/home.png" alt="Chiselturn home screen: the next statue on its turntable and the Carve key" width="390" height="844">
+    <img class="phone" src="assets/home.webp" alt="Chiselturn home screen: the next statue on its turntable and the Carve key" width="390" height="844">
   </div>
 
   <div class="rail" aria-hidden="true"></div>
@@ -88,7 +142,7 @@
         <li><span><b>Turn the turntable</b> to bring another face down to the rail.</span></li>
         <li><span><b>Keep a hook free.</b> Unveil the statue in as few turns as you can for three stars.</span></li>
       </ol>
-      <img class="shot" src="assets/turn.png" alt="A block of stones turning on the turntable above the rail, with the rack and the tray of chisels below" width="780" height="960" loading="lazy">
+      <img class="shot" src="assets/turn.webp" alt="A block of stones turning on the turntable above the rail, with the rack and the tray of chisels below" width="780" height="960" loading="lazy">
     </div>
     <p class="note">Tools when you are stuck: Extra Hook, Pick and Mallet. The Yard (30 statues) is free; All Chapters opens the other 60 with one purchase.</p>
   </section>
@@ -100,7 +154,7 @@
   </section>
 
   <footer>
-    <span>© 2026 Chiselturn</span>
+    <span style="display:inline-flex;align-items:center;min-height:44px">© 2026 Chiselturn</span>
     <a href="privacy.html">Privacy</a>
     <a href="support.html">Support</a>
   </footer>
