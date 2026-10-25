@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chiselturn — turn the stone, carve the statue</title>
+<meta name="description" content="Chiselturn is a calm iPhone puzzle: turn a block of coloured stone on a turntable and carve it with chisels along one rail. 90 statues, no ads, no tracking.">
+<link rel="canonical" href="https://nguyenvanlamm.github.io/chiselturn-site/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Chiselturn">
+<meta property="og:description" content="Turn the stone. Carve the statue. A calm puzzle for iPhone.">
+<meta property="og:image" content="https://nguyenvanlamm.github.io/chiselturn-site/assets/home.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Martian+Mono:wdth,wght@87.5..100,500..700&display=swap" rel="stylesheet">
+<style>
+  :root { --ground: #191715; --tile: #23211D; --chalk: #F2EEE5; --text2: #CBC7BF; --dim: #A7A29B; --accent: #8BC2E9; --hair: #3C3935; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--chalk); font: 17px/1.6 Geist, system-ui, sans-serif;
+    background-image: radial-gradient(circle at 1px 1px, rgba(242,238,229,.06) 1px, transparent 1.7px); background-size: 24px 24px; }
+  main { max-width: 980px; margin: 0 auto; padding: 40px 20px 64px; }
+  .mono { font-family: 'Martian Mono', ui-monospace, monospace; }
+  .label { font-family: 'Martian Mono', ui-monospace, monospace; font-stretch: 87.5%; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); }
+  header { display: flex; align-items: center; gap: 12px; }
+  header img { width: 44px; height: 44px; border-radius: 10px; }
+  header span { font-family: 'Martian Mono', monospace; font-weight: 700; font-size: 22px; letter-spacing: -.02em; }
+  .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; margin-top: 48px; }
+  h1 { font-family: 'Martian Mono', monospace; font-weight: 700; font-size: clamp(32px, 5vw, 52px); line-height: 1.08; letter-spacing: -.03em; margin: 14px 0 18px; }
+  .sub { color: var(--text2); font-size: 19px; max-width: 34em; }
+  .cta { display: inline-block; margin-top: 26px; padding: 15px 22px; border-radius: 11px; background: linear-gradient(#F6F3EC, #ECE7DD); color: #151311;
+    font-family: 'Martian Mono', monospace; font-weight: 700; font-size: 16px; text-decoration: none; box-shadow: 0 5px 0 #A39D91; }
+  .cta small { display: block; font-weight: 500; font-size: 12px; color: #4A4640; margin-top: 2px; }
+  .phone { width: 100%; max-width: 340px; justify-self: center; border-radius: 36px; box-shadow: 0 0 0 1px #35322D, 0 26px 60px rgba(0,0,0,.55); }
+  .rail { height: 3px; background: var(--accent); margin: 56px 0 8px; position: relative; }
+  .rail::before { content: '>'; position: absolute; left: -2px; top: -15px; color: var(--accent); font-family: 'Martian Mono', monospace; font-weight: 700; }
+  section { margin-top: 48px; }
+  h2 { font-weight: 600; font-size: 26px; letter-spacing: -.01em; margin: 8px 0 18px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .tile { background: var(--tile); border-radius: 16px; padding: 20px; box-shadow: inset 0 0 0 1px rgba(242,238,229,.055); }
+  .tile h3 { font-weight: 600; font-size: 19px; margin: 8px 0 6px; }
+  .tile p { margin: 0; color: var(--text2); font-size: 16px; }
+  .how { display: grid; grid-template-columns: .9fr 1.1fr; gap: 36px; align-items: center; }
+  ol { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+  ol li { counter-increment: step; display: grid; grid-template-columns: 44px 1fr; gap: 12px; margin-bottom: 18px; color: var(--text2); }
+  ol li::before { content: '0' counter(step); font-family: 'Martian Mono', monospace; font-stretch: 87.5%; font-weight: 600; font-size: 12px; color: #151311;
+    background: var(--accent); border-radius: 5px; height: 20px; display: grid; place-items: center; margin-top: 3px; }
+  ol b { color: var(--chalk); font-weight: 600; }
+  .shot { width: 100%; max-width: 360px; border-radius: 20px; justify-self: center; }
+  .note { margin-top: 18px; color: var(--dim); font-size: 15px; }
+  footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--hair); display: flex; gap: 22px; flex-wrap: wrap; color: var(--dim); font-size: 15px; }
+  footer a { color: var(--chalk); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  @media (max-width: 760px) { .hero, .how { grid-template-columns: 1fr; } .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <header><img src="assets/icon.png" alt="" width="44" height="44"><span>Chiselturn</span></header>
+
+  <div class="hero">
+    <div>
+      <div class="label">Puzzle · iPhone</div>
+      <h1>Turn the stone. Carve the statue.</h1>
+      <p class="sub">A calm puzzle about one rail, a turntable and a block of coloured stone. Choose the face, choose the chisel, and watch a picture come out of the rock.</p>
+      <a class="cta" href="#how">Coming soon on the App Store<small>See how it plays ↓</small></a>
+    </div>
+    <img class="phone" src="assets/home.png" alt="Chiselturn home screen: the next statue on its turntable and the Carve key" width="390" height="844">
+  </div>
+
+  <div class="rail" aria-hidden="true"></div>
+
+  <section aria-labelledby="why">
+    <div class="label">Why it is different</div>
+    <h2 id="why">Every turn changes the cut</h2>
+    <div class="grid">
+      <div class="tile"><div class="label">01 · Turn</div><h3>The face decides</h3><p>Only the stone nearest the rail can be struck. Turn the table 90° and a different face meets the chisel.</p></div>
+      <div class="tile"><div class="label">02 · Rack</div><h3>Plan the hooks</h3><p>A chisel with power left hangs on a hook. Fill every hook and the level stops, so the order matters.</p></div>
+      <div class="tile"><div class="label">03 · Calm</div><h3>90 statues, no rush</h3><p>Three chapters, from The Yard to The Gallery. No timers, no lives, no energy bar.</p></div>
+    </div>
+  </section>
+
+  <section id="how" aria-labelledby="howto">
+    <div class="label">How to play</div>
+    <h2 id="howto">Three moves, many choices</h2>
+    <div class="how">
+      <ol>
+        <li><span><b>Tap a chisel.</b> It runs along the rail and carves the front stone of its colour in each column.</span></li>
+        <li><span><b>Turn the turntable</b> to bring another face down to the rail.</span></li>
+        <li><span><b>Keep a hook free.</b> Unveil the statue in as few turns as you can for three stars.</span></li>
+      </ol>
+      <img class="shot" src="assets/turn.png" alt="A block of stones turning on the turntable above the rail, with the rack and the tray of chisels below" width="780" height="1688" loading="lazy">
+    </div>
+    <p class="note">Tools when you are stuck: Extra Hook, Pick and Mallet. The Yard (30 statues) is free; All Chapters opens the other 60 with one purchase.</p>
+  </section>
+
+  <section aria-labelledby="privacy">
+    <div class="label">Privacy</div>
+    <h2 id="privacy">No ads. No tracking. No account.</h2>
+    <p class="sub">Chiselturn plays offline and keeps your progress on your device. Read the <a href="privacy.html" style="color: var(--accent)">privacy policy</a>.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 Chiselturn</span>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html">Support</a>
+  </footer>
+</main>
+</body>
+</html>
