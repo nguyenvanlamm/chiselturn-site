@@ -1,7 +1,7 @@
 # Privacy Policy
-Chiselturn · last updated 25 October 2026
+Chiselturn · last updated 31 October 2026
 
-Chiselturn is a puzzle game. It does not ask who you are, and it does not sell any data about you.
+Chiselturn is a puzzle game published by Luong Nguyen. It does not ask who you are, and it does not sell any data about you.
 
 ## What stays on your device
 
